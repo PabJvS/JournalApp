@@ -1,17 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Provider } from "react-redux";
-import { JournalApp } from "./JournalApp";
-import { BrowserRouter } from "react-router-dom";
-import "./styles.css";
-import { store } from "./store";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { JournalApp } from './JournalApp';
+import { HashRouter } from 'react-router-dom';
+import './styles.css';
+import { store } from './store';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
    <React.StrictMode>
       <Provider store={store}>
-         <BrowserRouter>
+         {/* <BrowserRouter> */}
+         <HashRouter>
             <JournalApp />
-         </BrowserRouter>
+         </HashRouter>
+
+         {/* </BrowserRouter> */}
       </Provider>
    </React.StrictMode>
 );
